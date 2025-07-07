@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import '../core/validators.dart';
 
 class LoginParentsScreen extends StatelessWidget {
-  const LoginParentsScreen({super.key});
+  final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+
+  LoginParentsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +20,7 @@ class LoginParentsScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 40),
             TextField(
+              controller: _emailController,
               decoration: InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(
@@ -45,8 +50,17 @@ class LoginParentsScreen extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          'Correo válido: ${_emailController.text}',
+                        ),
+                      ),
+                    );
+                    Navigator.pushReplacementNamed(context, '/home');
+                  }
                   // Validar credenciales...
-                  Navigator.pushReplacementNamed(context, '/home');
                 },
                 child: const Text('Iniciar Sesión'),
               ),

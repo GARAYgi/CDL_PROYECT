@@ -2,7 +2,11 @@ import 'package:centro_deasarrollo_infantil/screens/home_teachers_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginTeachersScreen extends StatelessWidget {
-  const LoginTeachersScreen({super.key});
+  final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  
+  
+   LoginTeachersScreen({super.key, required});
 
   @override
   Widget build(BuildContext context) {

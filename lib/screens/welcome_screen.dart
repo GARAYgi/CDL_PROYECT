@@ -91,8 +91,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      const LoginParentsScreen(),
+                                  builder: (context) => LoginParentsScreen(),
                                 ),
                               );
                             },
@@ -124,8 +123,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      const LoginTeachersScreen(),
+                                  builder: (context) => LoginTeachersScreen(),
                                 ),
                               );
                             },

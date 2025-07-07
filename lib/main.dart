@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const WelcomeScreen(),
-        '/loginParents': (context) => const LoginParentsScreen(),
-        '/loginTeachers': (context) => const LoginTeachersScreen(),
+        '/loginParents': (context) => LoginParentsScreen(),
+        '/loginTeachers': (context) => LoginTeachersScreen(),
         '/home': (context) => const HomeScreen(),
         '/profile': (context) => const ChildProfileScreen(),
         '/activities': (context) => const ActivitiesScreen(),
@@ -38,7 +38,6 @@ class MyApp extends StatelessWidget {
         '/teacher/addUpdate': (context) => const AddUpdateScreen(),
         '/teacher/assistant': (context) => const AssistantScreen(),
         '/teacher/settings': (context) => const TeacherSettingsScreen(),
-        // Agrega más rutas según sea necesario
       },
     );
   }
